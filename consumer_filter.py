@@ -9,6 +9,6 @@ consumer = KafkaConsumer(
 
 for message in consumer:
     print(message)
+    if(message.value['amount']>1000):
+        print("ALERT")
     
-# TWÓJ KOD
-# Dla każdej wiadomości: sprawdź amount > 1000, jeśli tak — wypisz ALERT
